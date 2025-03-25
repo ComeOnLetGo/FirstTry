@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Sdl.Common.Licensing.Provider.SafeNetRMS</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Sdl.Common.Licensing.Provider.Core" />
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <Reference Include="SentinelLicensing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="Sdl.Core.PluginFramework" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+</Project>

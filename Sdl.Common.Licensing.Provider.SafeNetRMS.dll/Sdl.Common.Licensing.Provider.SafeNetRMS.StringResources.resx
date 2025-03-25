@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="SafeNet_FailedLicenseInstallation" xml:space="preserve"><value>Failed to install license.</value></data>
+  <data name="SafeNet_FailedRMSLicenseStringInstallation" xml:space="preserve"><value>Failed to install RMS license string.</value></data>
+  <data name="SafeNet_FailedToCheckOutFeature" xml:space="preserve"><value>Failed to check out license feature {0}.</value></data>
+  <data name="SafeNet_FailedToConnectToOOS" xml:space="preserve"><value>Could not connect to server (oos.sdl.com).</value></data>
+  <data name="SafeNet_RevokeFailed" xml:space="preserve"><value>Could not revoke this license.</value></data>
+  <data name="SafeNet_KeyNotValidForProduct" xml:space="preserve"><value>Invalid Product Key. Make sure that the Product Key belongs to the intended product or product version.</value></data>
+  <data name="BorrowLicenseControl_BorrowLicenseFailed" xml:space="preserve"><value>Borrowing of the license failed. Check if you have connection to the license server.</value></data>
+  <data name="SafeNet_ServerConnectionError_CheckAddress" xml:space="preserve"><value>Could not connect to the activation server. Check the activation server address in the provider settings.</value></data>
+  <data name="Error_FailedToContactLicenseServer" xml:space="preserve"><value>Failed to contact license server</value></data>
+  <data name="SafeNet_FailedLogin" xml:space="preserve"><value>Could not log into {0}.</value></data>
+  <data name="Error_SubmitRevocationRequestFailed" xml:space="preserve"><value>Error submitting revocation request</value></data>
+  <data name="SafeNet_FailedtoCheckInFeature" xml:space="preserve"><value>Failed to check in license feature {0}.</value></data>
+  <data name="SafeNet_FailedLicensingResourcesCleanup" xml:space="preserve"><value>Failed to cleanup licensing resources.</value></data>
+  <data name="Error_CreatePermissionTicketFailed" xml:space="preserve"><value>Error creating permission ticket</value></data>
+  <data name="Error_InvalidActivationResponse" xml:space="preserve"><value>Invalid activation response.</value></data>
+  <data name="SafeNet_LicenseAlreadyRevoked" xml:space="preserve"><value>This activation certificate has already been used. Generate another activation certificate from your account.</value></data>
+  <data name="SafeNet_CheckOutCommuterFeatureFailed" xml:space="preserve"><value>Could not check out commuter feature {0}.</value></data>
+  <data name="SafeNet_FailedToGetActivationId" xml:space="preserve"><value>Could not get activation ID.</value></data>
+  <data name="SafeNet_InvalidResponseFromOOS" xml:space="preserve"><value>Failed to obtain the activation server address.</value></data>
+  <data name="Error_TrialAidMissing" xml:space="preserve"><value>Missing AID configuration</value></data>
+  <data name="Error_NetworkLicenseNotSupportedInStandaloneProduct" xml:space="preserve"><value>Cannot activate this product using a network license.</value></data>
+  <data name="SafeNet_EMS_NotEnoughLicensesAvailable" xml:space="preserve"><value>{0} licenses are available for the specified activation code.</value></data>
+  <data name="SafeNet_ServerNotRunning" xml:space="preserve"><value>Studio could not connect to the Trados License Manager.
+Make sure the network connection is working and try again.</value></data>
+  <data name="SafeNet_FailedToGetLicenseInfo" xml:space="preserve"><value>Failed to retrieve information about activated licenses.</value></data>
+  <data name="SafeNet_FeatureNotSupported" xml:space="preserve"><value>Safenet does not support this feature.</value></data>
+  <data name="Error_GetFeaturesFailed" xml:space="preserve"><value>Failed to read license information.</value></data>
+  <data name="SafeNet_RevokeFailedByTicket" xml:space="preserve"><value>Could not revoke license by permission ticket.</value></data>
+  <data name="SafeNet_FailedActivation" xml:space="preserve"><value>Could not activate this license.</value></data>
+  <data name="SafeNet_ServerConnectionError" xml:space="preserve"><value>Could not connect to the activation server.</value></data>
+  <data name="SafeNet_CheckInCommuterFeatureFailed" xml:space="preserve"><value>Could not check in commuter feature {0}.</value></data>
+  <data name="SafeNet_CannotRetrieveLockingCriteria" xml:space="preserve"><value>The locking criteria specified in the entitlement cannot be retrieved from this computer. Expected: </value></data>
+  <data name="SafeNet_FailedRMSCreation" xml:space="preserve"><value>Failed to create RMS instance.</value></data>
+  </root>

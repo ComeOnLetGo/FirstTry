@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Sdl.Core.PluginFramework.PackageSupport</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Sdl.Core.PluginFramework.PackageSupport.OpenXCert.cer" />
+    <None Remove="Sdl.Core.PluginFramework.PackageSupport.SecureModeCert.cer" />
+    <EmbeddedResource Include="Sdl.Core.PluginFramework.PackageSupport.OpenXCert.cer" LogicalName="Sdl.Core.PluginFramework.PackageSupport.OpenXCert.cer" />
+    <EmbeddedResource Include="Sdl.Core.PluginFramework.PackageSupport.SecureModeCert.cer" LogicalName="Sdl.Core.PluginFramework.PackageSupport.SecureModeCert.cer" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Sdl.Core.PluginFramework" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+</Project>
