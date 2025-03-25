@@ -1,0 +1,36 @@
+<LicenseDefinition>
+	<LicenseEdition>
+		<Name>ProfessionalEdition</Name>
+		<IsCurrent>true</IsCurrent>
+		<Features>
+			<Feature>
+				<Name>AllowTQA</Name>
+				<IsDefault>true</IsDefault>
+			</Feature>
+		</Features>
+	</LicenseEdition>
+	<LicenseEdition>
+		<Name>WorkgroupEdition</Name>
+		<IsCurrent>false</IsCurrent>
+		<Features>
+			<Feature>
+				<Name>AllowTQA</Name>
+				<IsDefault>true</IsDefault>
+			</Feature>
+		</Features>
+	</LicenseEdition>
+	<LicenseEdition>
+		<Name>ExpressEdition</Name>
+		<IsCurrent>false</IsCurrent>
+		<Features>
+			<Feature>
+				<Name>AllowTQA</Name>
+				<IsDefault>false</IsDefault>
+			</Feature>
+			<Feature>
+				<Name>AllowPerfectMatch</Name>
+				<IsDefault>false</IsDefault>
+			</Feature>
+		</Features>
+	</LicenseEdition>
+</LicenseDefinition>

@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="PerpetualLicense_ExpressLicense_Description" xml:space="preserve"><value>Trados Studio 2022 Express</value></data>
+  <data name="PublishProjectPackageCreation_Name" xml:space="preserve"><value>Create package</value></data>
+  <data name="ProjectPackageImport_OpenPackage" xml:space="preserve"><value>Opening package</value></data>
+  <data name="ProjectsListSyncOperation_Description" xml:space="preserve"><value>Projects list</value></data>
+  <data name="PublishProjectOperation_FileBasedTMWarning" xml:space="preserve"><value>References to file-based translation memories  are not published to the server. To share TMs, use server-based TMs.</value></data>
+  <data name="FileStatus_Constant" xml:space="preserve"><value>(constant)</value></data>
+  <data name="PerpetualLicense_ProfessionalLicenseWithCustomerName_Description" xml:space="preserve"><value>Trados Studio 2022 ({0})</value></data>
+  <data name="PackagePreviewInfo_Comment" xml:space="preserve"><value>Comment</value></data>
+  <data name="FileStatus_Scanned" xml:space="preserve"><value>Scanned</value></data>
+  <data name="ReturnPackageImport_UpdateTM" xml:space="preserve"><value>Update TM</value></data>
+  <data name="FileStatus_Original" xml:space="preserve"><value>Original</value></data>
+  <data name="FileFilterType_BuiltInQuarkXPress" xml:space="preserve"><value>TRADOS QuarkXPress Filter</value></data>
+  <data name="PerpetualLicense_InvalidOnCorporateNetwork_ShortStatus" xml:space="preserve"><value>This license edition does not work on domain-based networks</value></data>
+  <data name="ReturnPackageImport_ImportFiles" xml:space="preserve"><value>Import files</value></data>
+  <data name="TermbaseServer_Error_RPCServerNotAvailable" xml:space="preserve"><value>The MultiTerm Server is currently not available.</value></data>
+  <data name="ProjectPackageImport_Source" xml:space="preserve"><value>Import Project Package</value></data>
+  <data name="ReturnPackageCreation_CompressingPackage" xml:space="preserve"><value>Compressing package</value></data>
+  <data name="InvalidManualTask" xml:space="preserve"><value>Missing permissions for {0}</value></data>
+  <data name="TagsSettings_FileExtensions_HTML" xml:space="preserve"><value>*.htm;*.html;*.jsp;*.asp;*.aspx</value></data>
+  <data name="ProjectPackageImport_ImportingTermbases" xml:space="preserve"><value>Importing termbases</value></data>
+  <data name="ComplexTask_PseudoTranslateRoundTrip_Name" xml:space="preserve"><value>Pseudo-translate Round Trip</value></data>
+  <data name="ManualTask_Review_Description" xml:space="preserve"><value>Review files</value></data>
+  <data name="ProjectTrackingHelper_TMServer_DefaultAnywhereProfileName" xml:space="preserve"><value>TM Anywhere</value></data>
+  <data name="PublishProjectOperation_MessageSource" xml:space="preserve"><value>Publish Project</value></data>
+  <data name="ProjectPackageCreation_FileMessage" xml:space="preserve"><value>{0}: {1}</value></data>
+  <data name="ProjectPackageCreation_InitPackage" xml:space="preserve"><value>Initializing package</value></data>
+  <data name="ProjectPackageImport_FileMessage" xml:space="preserve"><value>{0}: {1}</value></data>
+  <data name="CredentialProvider_FailedToLoad_EmptyUsername" xml:space="preserve"><value>Failed to load credentials. Empty 'Username' element.</value></data>
+  <data name="PackagePreviewInfo_SourceLanguage" xml:space="preserve"><value>Source Language</value></data>
+  <data name="ReturnPackageCreation_AddingFiles" xml:space="preserve"><value>Adding files</value></data>
+  <data name="AddTranslatableFile_InvalidOriginalFile" xml:space="preserve"><value>Failed to update translatable file, because the original file is not translatable.</value></data>
+  <data name="ServerBasedTranslationMemory_Description" xml:space="preserve"><value>Server TM: {0}</value></data>
+  <data name="InvalidTranslationMemoryInfo" xml:space="preserve"><value>Invalid Translation Memory URI</value></data>
+  <data name="ComplexTask_Finalize_Name" xml:space="preserve"><value>Finalize</value></data>
+  <data name="SecureProjects_InvalidEncryptedFile" xml:space="preserve"><value>Encrypted file not recognised.</value></data>
+  <data name="OpenServerProjectOperation_Failed" xml:space="preserve"><value>Failed to open server project.</value></data>
+  <data name="FileFilterType_BuiltInQuarkXPress_DocType" xml:space="preserve"><value>QuarkXPress Tagged|*.qsc;*.xtg;*.ttg;*.tag</value></data>
+  <data name="FileStatus_Analyzed_Description" xml:space="preserve"><value>File has been analyzed against translation memory</value></data>
+  <data name="PublishProjectOperation_FileBasedTermbaseWarning" xml:space="preserve"><value>References to file-based termbases are not published to the server. To share termbases, use server-based termbases.</value></data>
+  <data name="FileStatus_PreTranslated" xml:space="preserve"><value>Pre-translated</value></data>
+  <data name="ProjectMissingLocationSettingsMessage" xml:space="preserve"><value>Server project missing location settings.</value></data>
+  <data name="PackageImport_Source" xml:space="preserve"><value>Package import</value></data>
+  <data name="UnknownTranslationProvider_Description" xml:space="preserve"><value>Unknown</value></data>
+  <data name="ReturnPackageImport_OpenPackage" xml:space="preserve"><value>Open package</value></data>
+  <data name="TagsSettings_FileExtensions_XML" xml:space="preserve"><value>*.xml;*.xsl</value></data>
+  <data name="CredentialProvider_FailedToLoad_FailedToDecryptPassword" xml:space="preserve"><value>Failed to load credentials. Failed to decrypt password ({0}).</value></data>
+  <data name="PerpetualLicense_FreelanceLicense_Description" xml:space="preserve"><value>Trados Studio 2022 Freelance</value></data>
+  <data name="IncorrectArgumentMessage" xml:space="preserve"><value>Invalid argument type received</value></data>
+  <data name="ServerConnectionProfile_RemoteServer_DefaultName" xml:space="preserve"><value>Default</value></data>
+  <data name="OpenServerProjectOperation_MessageSource" xml:space="preserve"><value>Open Server Project</value></data>
+  <data name="ProjectPackageImport_ImportingLanguageDirections" xml:space="preserve"><value>Setting up language pairs</value></data>
+  <data name="FileStatus_Proofread" xml:space="preserve"><value>Proofread</value></data>
+  <data name="ProjectFileMigration_MigrationMessage" xml:space="preserve"><value>The project '{0}' has been updated for use with this version of Trados Studio. 
+Some of the information for server-based memories, automated translation, and termbases could not be updated. 
+Check the project settings to re-establish the connection to the server.</value></data>
+  <data name="ComplexTask_Prepare_Name" xml:space="preserve"><value>Prepare</value></data>
+  <data name="MT_LimitReachedWarning" xml:space="preserve"><value>MT character limit exceeded – Check the Notifications area for more details.</value></data>
+  <data name="PackagePreviewInfo_Files" xml:space="preserve"><value>Files</value></data>
+  <data name="PerpetualLicense_PurchaseLicenseURL" xml:space="preserve"><value>https://www.trados.com/product-store</value></data>
+  <data name="PerpetualLicense_ProfessionalLicense_Description" xml:space="preserve"><value>Trados Studio 2022 Professional</value></data>
+  <data name="IncorrectArgumentNumberMessage" xml:space="preserve"><value>Invalid number of arguments received</value></data>
+  <data name="AddTranslatableFile_Status" xml:space="preserve"><value>Adding file {0} of {1}</value></data>
+  <data name="PackagePreviewInfo_Words" xml:space="preserve"><value>Words</value></data>
+  <data name="ProjectPackageImport_CreatingProject" xml:space="preserve"><value>Creating project</value></data>
+  <data name="FileStatus_Converted_Description" xml:space="preserve"><value>File has been converted to translation format</value></data>
+  <data name="FileFilterType_BuiltInWordDoc_DocType" xml:space="preserve"><value>RTF (Word as translation editor)|*.doc;*.rtf</value></data>
+  <data name="PerpetualLicense_InvalidOnCorporateNetwork_MessageBox" xml:space="preserve"><value>Your current license does not allow you to run Trados Studio when connected to a corporate domain-based network.
+
+Disconnect from the corporate network domain and restart Trados Studio to continue, or consider upgrading your license.</value></data>
+  <data name="Termbases_LocalRepositoryName" xml:space="preserve"><value>(Local Termbases)</value></data>
+  <data name="Local_Termbase_Is_Read_Only_Message" xml:space="preserve"><value>The termbase at {0} is read only on disk and cannot be opened. To work with local termbases in MultiTerm, termbases should not be read only. Please remove the read only attribute on this file.</value></data>
+  <data name="FileBasedTranslationMemory_Description" xml:space="preserve"><value>File TM: {0}</value></data>
+  <data name="ProjectPackageCreation_AddingFiles" xml:space="preserve"><value>Adding files</value></data>
+  <data name="ProjectPackageCreation_SavingPackage" xml:space="preserve"><value>Save package</value></data>
+  <data name="ComplexTask_AnalyzeOnly_Name" xml:space="preserve"><value>Analyze Only</value></data>
+  <data name="ManualTask_Translate_Name" xml:space="preserve"><value>Translate</value></data>
+  <data name="ProjectPackageCreation_InitializingPackage" xml:space="preserve"><value>Collect package data</value></data>
+  <data name="PackagePreviewInfo_Project" xml:space="preserve"><value>Project</value></data>
+  <data name="ProjectPackageCreation_Source" xml:space="preserve"><value>Create Project Package</value></data>
+  <data name="PublishProjectOperation_Cancelled" xml:space="preserve"><value>Project publication cancelled.</value></data>
+  <data name="ProjectPackageCreation_CompressingPackage" xml:space="preserve"><value>Compressing package</value></data>
+  <data name="FileFilterType_BuiltInInDesign" xml:space="preserve"><value>TRADOS InDesign Filter</value></data>
+  <data name="FileFilterType_BuiltInPageMaker" xml:space="preserve"><value>TRADOS PageMaker Filter</value></data>
+  <data name="CopyableTranslationProviderItem_InvalidTranslationProvider" xml:space="preserve"><value>Translation provider cannot be copied.</value></data>
+  <data name="FileStatus_Translated" xml:space="preserve"><value>Translated</value></data>
+  <data name="PublishProjectOperation_FileBasedLanguageResourceTemplateWarning" xml:space="preserve"><value>References to file-based language resource templates are not published to the server. To share language resource templates, use server-based language resource templates with server-based TMs.</value></data>
+  <data name="SecureProjects_NoEncryptionkey" xml:space="preserve"><value>Secure projects can only be accessed when connected to the Internet.</value></data>
+  <data name="PerpetualLicense_StarterLicense_Description" xml:space="preserve"><value>Trados Studio 2022 Starter</value></data>
+  <data name="ReturnPackageCreation_InitPackage" xml:space="preserve"><value>Initializing package</value></data>
+  <data name="FileStatus_Split_Description" xml:space="preserve"><value>File has been split by target languages</value></data>
+  <data name="PackageProject_InvalidDigitalSignature" xml:space="preserve"><value>Invalid package digital signature</value></data>
+  <data name="ProjectSettingsContext_Name" xml:space="preserve"><value>Project Settings - {0}</value></data>
+  <data name="PerpetualLicense_TrialLicense_Description" xml:space="preserve"><value>Trados Studio 2022 (Trial)</value></data>
+  <data name="CredentialProvider_FailedToLoad_MissingKey" xml:space="preserve"><value>Failed to load credentials. Missing 'key' attribute on 'Credential' element.</value></data>
+  <data name="ComplexTask_TranslateAndAnalyze_Description" xml:space="preserve"><value>Convert, analyze and pre-translate files using GroupShare server-side processing.</value></data>
+  <data name="FileFilterType_BuiltInInDesign_DocType" xml:space="preserve"><value>InDesign Tagged|*.txt;*.isc</value></data>
+  <data name="FileStatus_Converted" xml:space="preserve"><value>Converted</value></data>
+  <data name="OpenServerProjectOperation_OpeningPackage" xml:space="preserve"><value>Opening package...</value></data>
+  <data name="FilesOperationEmptyFilesArgumentMessage" xml:space="preserve"><value>Empty file list received as argument!</value></data>
+  <data name="PublishProjectOperation_Status_Completed" xml:space="preserve"><value>Completed</value></data>
+  <data name="FileStatus_Final" xml:space="preserve"><value>Final</value></data>
+  <data name="FileStatus_Split" xml:space="preserve"><value>Split</value></data>
+  <data name="PackageProject_InvalidLicenseOverride" xml:space="preserve"><value>Invalid package project license override</value></data>
+  <data name="PerpetualLicense_BorrowedLicenseExpired_Description" xml:space="preserve"><value>Borrowed License Expired</value></data>
+  <data name="FileStatus_ConvertedToOriginal" xml:space="preserve"><value>Converted to Original</value></data>
+  <data name="ComplexTask_Finalize_Description" xml:space="preserve"><value>Update main translation memories and generate target translations for files.</value></data>
+  <data name="ReturnPackageImport_Source" xml:space="preserve"><value>Import Return Package</value></data>
+  <data name="FileStatus_PreTranslated_Description" xml:space="preserve"><value>File has been translated using translation memory</value></data>
+  <data name="ProjectSyncOperation_Description" xml:space="preserve"><value>Project: {0}</value></data>
+  <data name="ServerConnectionProfile_TranslationMemoryServer_DefaultName" xml:space="preserve"><value>Default</value></data>
+  <data name="ComplexTask_TranslateAndAnalyze_Name" xml:space="preserve"><value>Prepare with GroupShare</value></data>
+  <data name="PublishProjectOperation_Status_Cancelled" xml:space="preserve"><value>Cancelled</value></data>
+  <data name="PerpetualLicense_Description" xml:space="preserve"><value>View and manage your Trados Studio license.</value></data>
+  <data name="CredentialProvider_FailedToLoad_MissingUsername" xml:space="preserve"><value>Failed to load credentials. Missing 'Username' element.</value></data>
+  <data name="FileFilterType_BuiltInVentura" xml:space="preserve"><value>TRADOS Ventura Filter</value></data>
+  <data name="FileOverwritten" xml:space="preserve"><value>Replaced '{0}' with an older version that was included in the package.</value></data>
+  <data name="CopyableTranslationProviderItem_InvalidProject" xml:space="preserve"><value>Project cannot be null.</value></data>
+  <data name="PackagePreviewInfo_DueDate" xml:space="preserve"><value>Due Date</value></data>
+  <data name="FileFilterType_BuiltInWordDoc" xml:space="preserve"><value>Word Converter</value></data>
+  <data name="FileStatus_Analyzed" xml:space="preserve"><value>Analyzed</value></data>
+  <data name="FileStatus_Final_Description" xml:space="preserve"><value>File has been finalized</value></data>
+  <data name="ComplexTask_AnalyzeOnly_Description" xml:space="preserve"><value>Convert and analyze files without performing pre-translation.</value></data>
+  <data name="LCProjectTemplate_Description" xml:space="preserve"><value>Cloud project template</value></data>
+  <data name="TagsSettings_FileTypeName_HTML" xml:space="preserve"><value>HTML Documents</value></data>
+  <data name="ReturnPackageImport_RecomputingStats" xml:space="preserve"><value>Compute confirmation statistics</value></data>
+  <data name="ComplexTask_Prepare_NoProjectTM_Description" xml:space="preserve"><value>Convert, analyze and pre-translate files without creating project translation memories.</value></data>
+  <data name="ComplexTask_Prepare_Description" xml:space="preserve"><value>Convert, analyze and pre-translate files.</value></data>
+  <data name="PublishProjectOperation_Status_Cancelling" xml:space="preserve"><value>Cancelling</value></data>
+  <data name="TagsSettings_FileTypeName_XML" xml:space="preserve"><value>XML Documents</value></data>
+  <data name="ManualTask_Translate_Description" xml:space="preserve"><value>Translate files</value></data>
+  <data name="ReturnPackageImport_Cancelled" xml:space="preserve"><value>Package import cancelled.</value></data>
+  <data name="FileStatus_Proofread_Description" xml:space="preserve"><value>File has been proofread</value></data>
+  <data name="CredentialProvider_FailedToLoad" xml:space="preserve"><value>Failed to load credentials ({0}).</value></data>
+  <data name="PublishProjectPackageCreation_FileXNotFound" xml:space="preserve"><value>Project file '{0}' could not be found.</value></data>
+  <data name="PublishProjectOperation_ProjectExists" xml:space="preserve"><value>Project name already in use on server at specified location</value></data>
+  <data name="PackagePreviewInfo_ReturnPackage" xml:space="preserve"><value>Return Package</value></data>
+  <data name="FileFilterType_BuiltInStaggerInterleaf_DocType" xml:space="preserve"><value>Interleaf IASCII|*.doc;*.sty;*.ildoc;*.ilsty</value></data>
+  <data name="OperationNoArgumentMessage" xml:space="preserve"><value>Missing arguments</value></data>
+  <data name="PublishProjectOperation_Failed" xml:space="preserve"><value>Failed to publish the project.</value></data>
+  <data name="UpdateServerProjectSettingsOperationInvalidBoolMessage" xml:space="preserve"><value>First argument is not a valid bool!</value></data>
+  <data name="PackagePreviewInfo_TargetLanguages" xml:space="preserve"><value>Target Languages</value></data>
+  <data name="FileFilterType_BuiltInTaggedRtf_DocType" xml:space="preserve"><value>Workbench RTF|*.rtf</value></data>
+  <data name="PublishProjectOperation_Status_Pending" xml:space="preserve"><value>Pending</value></data>
+  <data name="TranslatableFileSettingsContext_Name" xml:space="preserve"><value>File Settings - {0}</value></data>
+  <data name="ProjectPackageImport_ImportingTasks" xml:space="preserve"><value>Importing files</value></data>
+  <data name="FileFilterType_BuiltInStaggerFrameMaker_DocType" xml:space="preserve"><value>FrameMaker MIF|*.mif</value></data>
+  <data name="ReturnPackageImport_CreatedYourself" xml:space="preserve"><value>Failed to import return package, because you created it yourself.</value></data>
+  <data name="ProjectFileMigration_BeforeMigrationMessage" xml:space="preserve"><value>This project was created in an earlier version of Trados Studio and must be upgraded. The upgrade process
+archives any necessary files that require changing (renamed with .bak file extension). Once the project has been
+upgraded, it can only be opened in the earlier version by reverting to the archived project files.
+
+Do you want to upgrade the project and open it in Trados Studio?</value></data>
+  <data name="RevertToSDLXLIFF" xml:space="preserve"><value>Revert to SDLXLIFF</value></data>
+  <data name="RemoteServer_ProjectTrackingService_InvalidRights" xml:space="preserve"><value>The specified user has no rights for this application.</value></data>
+  <data name="PerpetualLicense_InvalidWithTerminalServices_ShortStatus" xml:space="preserve"><value>(Invalid – Remote Desktop Services installed)</value></data>
+  <data name="PackagePreviewInfo_ExpectedStatus" xml:space="preserve"><value>Expected Status</value></data>
+  <data name="FileStatus_ConvertedToOriginal_Description" xml:space="preserve"><value>File has been converted to its original format</value></data>
+  <data name="ReturnPackageCreation_Source" xml:space="preserve"><value>Create Return Package</value></data>
+  <data name="TermbaseServer_Error_UnknownError" xml:space="preserve"><value>Error when connecting to the MultiTerm Server (Error code: {0:x})</value></data>
+  <data name="FileFilterType_BuiltInTaggedRtf" xml:space="preserve"><value>Tagged RTF Filter</value></data>
+  <data name="AddManualTask_AssignedAndCompletedCheck" xml:space="preserve"><value>You can only include assigned or completed tasks.</value></data>
+  <data name="FileFilterType_BuiltInVentura_DocType" xml:space="preserve"><value>Ventura Tagged|*.txt</value></data>
+  <data name="FileStatus_Scanned_Description" xml:space="preserve"><value>File type detected</value></data>
+  <data name="ProjectPackageImport_LCTermbaseDescription" xml:space="preserve"><value>Termbase imported from cloud</value></data>
+  <data name="PackagePreviewInfo_Untranslated" xml:space="preserve"><value>Untranslated</value></data>
+  <data name="TaskException_ConfigureFile" xml:space="preserve"><value>Unexpected error(s) when configuring file converter for task '{0}'. Example</value></data>
+  <data name="ComplexTask_Prepare_NoProjectTM_Name" xml:space="preserve"><value>Prepare without project TM</value></data>
+  <data name="PerpetualLicense_TrialExpired_Description" xml:space="preserve"><value>Trial Expired</value></data>
+  <data name="ProjectFile_FileXNotFound" xml:space="preserve"><value>Project file '{0}' could not be found.</value></data>
+  <data name="PublishProjectOperation_Status_Failed" xml:space="preserve"><value>Failed</value></data>
+  <data name="PackagePreviewInfo_CurrentStatus" xml:space="preserve"><value>Current Status</value></data>
+  <data name="PublishProjectOperation_ExecutionServerError" xml:space="preserve"><value>The Execution Server failed to publish the project: {0}. Check the Execution Server log for more information.</value></data>
+  <data name="PerpetualLicense_LeaseExpired_Description" xml:space="preserve"><value>License Expired</value></data>
+  <data name="FilesOperationNullFilesArgumentMessage" xml:space="preserve"><value>Null file list received as argument!</value></data>
+  <data name="PackagePreviewInfo_ExpectedStatus_NotSpecified" xml:space="preserve"><value>not specified</value></data>
+  <data name="ComplexTask_PseudoTranslateRoundTrip_Description" xml:space="preserve"><value>Convert, pseudo-translate and generate target translations for files.</value></data>
+  <data name="ProjectTemplateSettingsContext_Name" xml:space="preserve"><value>Project Template Settings - {0}</value></data>
+  <data name="PerpetualLicense_ProfessionalLicenseWithEULA_Description" xml:space="preserve"><value>Trados Studio 2022 (EULA Controlled)</value></data>
+  <data name="ManualTask_Error_Name" xml:space="preserve"><value>Error</value></data>
+  <data name="FileNotOverwritten" xml:space="preserve"><value>Skipped copying '{0}' into the project because the local version was newer than the file in the package.</value></data>
+  <data name="UnknownUser_UserId" xml:space="preserve"><value>(unknown)</value></data>
+  <data name="ReturnPackageImport_ProjectDoesNotExist" xml:space="preserve"><value>Failed to import return package, because it contains a project that does not exist in your setup (Name='{0}', ID='{1}').</value></data>
+  <data name="CredentialProvider_FailedToLoad_MissingAuthenticationMode" xml:space="preserve"><value>Failed to load credentials. Missing 'AuthenticationMode' element.</value></data>
+  <data name="ProjectTemplateFileMigration_BeforeMigrationMessage" xml:space="preserve"><value>This project template was created in an earlier version of Trados Studio and must be upgraded. The upgrade process
+archives any necessary files that require changing (renamed with .bak file extension). Once the project template has been
+upgraded, it can only be opened in the earlier version by reverting to the archived project template file.
+
+Do you want to upgrade this project template for use in Trados Studio?</value></data>
+  <data name="ProjectPackageImport_ImportingTermbaseFile" xml:space="preserve"><value>Importing termbase {0}</value></data>
+  <data name="FileFilterType_BuiltInStaggerInterleaf" xml:space="preserve"><value>S-Tagger for Interleaf</value></data>
+  <data name="ManualTask_Error_Description" xml:space="preserve"><value>Review errors</value></data>
+  <data name="PerpetualLicense_WorkGroupLicense_Description" xml:space="preserve"><value>Trados Studio 2022 Workgroup</value></data>
+  <data name="FileStatus_Constant_Description" xml:space="preserve"><value>Reference file</value></data>
+  <data name="ServerBasedMachineTranslation_Description" xml:space="preserve"><value>Server MT: {0}</value></data>
+  <data name="PackagePreviewInfo_Name" xml:space="preserve"><value>Name</value></data>
+  <data name="ProjectPackageImport_ImportingTermbaseEntries" xml:space="preserve"><value>Importing entry record: {1} of termbase '{0}' </value></data>
+  <data name="ReturnPackageImport_UpdateOwner" xml:space="preserve"><value>Update file ownership</value></data>
+  <data name="LCProjectTemplate_Name" xml:space="preserve"><value>LanguageCloud</value></data>
+  <data name="ReturnPackageImport_BackingUpPackage" xml:space="preserve"><value>Backing up package</value></data>
+  <data name="CredentialProvider_FailedToLoad_InvalidAuthenticationMode" xml:space="preserve"><value>Failed to load credentials. Invalid 'AuthenticationMode' element.</value></data>
+  <data name="PackagePreviewInfo_ProjectPackage" xml:space="preserve"><value>Project Package</value></data>
+  <data name="FileStatus_Original_Description" xml:space="preserve"><value>File is in its original format</value></data>
+  <data name="PerpetualLicense_Title" xml:space="preserve"><value>Trados Studio 2022 Product Activation</value></data>
+  <data name="FileFilterType_BuiltInPageMaker_DocType" xml:space="preserve"><value>PageMaker Tagged|*.txt</value></data>
+  <data name="CredentialProvider_FailedToLoad_MissingPassword" xml:space="preserve"><value>Failed to load credentials. Missing 'Password' element.</value></data>
+  <data name="PublishProjectOperation_Status_InProgress" xml:space="preserve"><value>In progress</value></data>
+  <data name="FileFilterType_BuiltInStaggerFrameMaker" xml:space="preserve"><value>S-Tagger for FrameMaker</value></data>
+  <data name="ProjectPackageImport_UpdatingProject" xml:space="preserve"><value>Updating project</value></data>
+  <data name="FileStatus_Translated_Description" xml:space="preserve"><value>File has been fully translated</value></data>
+  <data name="PublishProjectOperation_LocalAutoSuggestDictionariesWarning" xml:space="preserve"><value>References to AutoSuggest dictionaries that are stored locally are not published to the server. To share AutoSuggest dictionaries, place them in a shared public folder.</value></data>
+  <data name="ProjectPackageCreation_ReleaseOwnership" xml:space="preserve"><value>Update file ownership</value></data>
+  <data name="ManualTask_Review_Name" xml:space="preserve"><value>Review</value></data>
+  </root>

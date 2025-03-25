@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp1 (http://www.altova.com) by Paul Hardy (SDL Sheffield Ltd) -->
+<!-- edited with XMLSpy v2007 sp1 (http://www.altova.com) by Paul Hardy (SDL Sheffield Ltd) -->
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by EDV (TRADOS) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Application">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="LocalProjectServers" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LocalProjectServerInfo" type="LocalProjectServerInfo" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Version" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<!--
+	<xs:complexType name="ServerConnectionListItem">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:sequence>
+					<xs:element name="ServerConnectionInfo" type="ServerConnectionInfo"/>
+				</xs:sequence>
+				<xs:attribute name="LocalDataFolder" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ServerConnectionInfo">
+		<xs:sequence>
+			<xs:element name="ServerConnectionProfiles" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ServerConnectionProfile" type="ServerConnectionProfile" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="DefaultServerConnectionProfileGuid" type="xs:string" use="optional"/>
+		<xs:attribute name="Name" type="xs:string" use="required"/>
+	</xs:complexType>
+-->
+	<xs:element name="ProjectServer">
+		<xs:annotation>
+			<xs:documentation>Root element for Server settings schema</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<!--
+				<xs:element name="ServerConnectionInfo" type="ServerConnectionInfo"/>
+-->
+				<xs:element name="Workflow" type="Workflow"/>
+				<xs:element name="Projects">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ProjectListItem" type="ProjectListItem" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ProjectTemplates">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ProjectTemplateListItem" type="ProjectTemplateListItem" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Users">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="User" type="User" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Customers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Customer" type="Customer" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ActiveManualTaskIndex" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ManualTaskIndexEntry" type="ManualTaskIndexEntry" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Version" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PackageProject">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Project">
+					<xs:sequence>
+						<xs:element name="PackageTasks">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="TaskRef" type="TaskRef" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="PackageLicenseInfo" type="PackageLicenseInfo" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="PackageGuid" type="xs:string" use="required"/>
+					<xs:attribute name="PackageType" type="PackageType" use="required"/>
+					<xs:attribute name="Comment" type="xs:string"/>
+					<xs:attribute name="PackageCreatedAt" type="xs:dateTime" use="required"/>
+					<xs:attribute name="PackageCreatedBy" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Project" type="Project">
+		<xs:annotation>
+			<xs:documentation>Root element for the Project schema</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="Project">
+		<xs:complexContent>
+			<xs:extension base="ProjectConfiguration">
+				<xs:sequence>
+					<xs:element name="GeneralProjectInfo" type="GeneralProjectInfo"/>
+					<xs:element name="SourceLanguageCode" type="xs:string"/>
+					<xs:element name="ProjectFiles">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ProjectFile" type="ProjectFile" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+          <xs:element name="WordCountStatistics" minOccurs="0" type="WordCountStatistics"/>
+          <xs:element name="Tasks">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:choice>
+									<xs:element name="ManualTask" type="ManualTask"/>
+									<xs:element name="AutomaticTask" type="AutomaticTask"/>
+								</xs:choice>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="PackageOperations" type="PackageOperations" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="ProjectTemplateGuid" type="xs:string" use="optional"/>
+				<xs:attribute name="ReferenceProjectGuid" type="xs:string" use="optional"/>
+				<xs:attribute name="Version" type="xs:string" use="required"/>
+				<xs:attribute name="Owner" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ProjectTemplate">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="ProjectConfiguration">
+					<xs:sequence>
+						<xs:element name="GeneralProjectTemplateInfo" type="GeneralProjectTemplateInfo"/>
+            <xs:element name="FilterConfiguration" minOccurs="0" type="FilterConfiguration"/>
+            <!--
+						<xs:element name="ServerConnectionManager" type="xs:string" minOccurs="0"/>
+-->
+					</xs:sequence>
+					<xs:attribute name="Version" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ProjectListItem">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:sequence>
+					<xs:element name="ProjectInfo" type="GeneralProjectInfo"/>
+					<xs:element name="SettingsBundle" type="SettingsBundle" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="ProjectFilePath" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProjectTemplateListItem">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:sequence>
+					<xs:element name="ProjectTemplateInfo" type="GeneralProjectTemplateInfo"/>
+				</xs:sequence>
+				<xs:attribute name="ProjectTemplateFilePath" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="GeneralProjectInfo">
+		<xs:sequence>
+			<xs:element name="Customer" type="Customer" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:string" use="required"/>
+		<xs:attribute name="Description" type="xs:string" use="required"/>
+		<xs:attribute name="IsImported" type="xs:boolean" use="required"/>
+		<xs:attribute name="CreatedAt" type="xs:dateTime" use="required"/>
+		<xs:attribute name="CreatedBy" type="xs:string" use="required"/>
+		<xs:attribute name="Status" type="ProjectStatus" use="required"/>
+		<xs:attribute name="StartedAt" type="xs:dateTime" use="optional"/>
+		<xs:attribute name="CompletedAt" type="xs:dateTime" use="optional"/>
+		<xs:attribute name="ArchivedAt" type="xs:dateTime" use="optional"/>
+		<xs:attribute name="DueDate" type="xs:dateTime" use="optional"/>
+		<!--
+		<xs:attribute name="OrganizationID" type="xs:string"/>
+-->
+    <xs:attribute name="IsInPlace" type="xs:boolean" use="required"/>
+    <xs:attribute name="PackageConvertor" type="xs:string" use="optional"/>
+    <xs:attribute name="IsSecure" type="xs:boolean" use="optional"/>
+    <xs:attribute name="IsCloudBased" type="xs:boolean" use="optional" default="false" />
+    <xs:attribute name="LanguageCloudLocation" type="xs:string" use="optional"/>
+  </xs:complexType>
+	<xs:complexType name="GeneralProjectTemplateInfo">
+		<xs:attribute name="Description" type="xs:string" use="required"/>
+		<xs:attribute name="CreatedAt" type="xs:dateTime" use="required"/>
+		<xs:attribute name="CreatedBy" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="LanguageDirection">
+		<xs:complexContent>
+			<xs:extension base="GenericItemWithSettings">
+				<xs:sequence>
+					<!--
+          <xs:element name="TranslationProviderCascade" type="TranslationProviderCascade"/>
+-->
+					<!--
+					<xs:element name="ProjectTranslationMemories">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ProjectTranslationMemory" type="ProjectTranslationMemory" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+-->
+					<xs:element name="AutoSuggestDictionaries">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="AutoSuggestDictionary" type="AutoSuggestDictionary" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="AnalysisStatistics" type="AnalysisStatistics" minOccurs="0"/>
+					<xs:element name="ConfirmationStatistics" type="ConfirmationStatistics" minOccurs="0"/>
+					<xs:element name="CascadeItem" type="CascadeItem"/>
+				</xs:sequence>
+				<xs:attribute name="SourceLanguageCode" type="xs:string" use="required"/>
+				<xs:attribute name="TargetLanguageCode" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TaskTemplate">
+		<xs:attribute name="Id" type="xs:string" use="required"/>
+		<xs:attribute name="Name" type="xs:string" use="required"/>
+		<xs:attribute name="Description" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="ComplexTaskTemplate">
+		<xs:sequence>
+			<xs:element name="SubTaskTemplates">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="SubTaskTemplate" type="SubTaskTemplate" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Id" type="xs:string" use="required"/>
+		<xs:attribute name="Name" type="xs:string" use="required"/>
+		<xs:attribute name="Description" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="SubTaskTemplate">
+		<xs:attribute name="TaskTemplateId" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="ManualTaskTemplate">
+		<xs:complexContent>
+			<xs:extension base="TaskTemplate">
+				<xs:sequence>
+					<xs:element name="SupportedFileTypes">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Types" minOccurs="0" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:attribute name="FileType" type="TaskFileType" use="required"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="WorkflowStageType" type="WorkflowStageType" use="required"/>
+				<xs:attribute name="GeneratedFileType" type="TaskFileType" use="optional"/>
+        <!-- Whether this task template was imported from another system, e.g. Language Cloud. This controls whether Studio allows creating packages with it. -->
+        <xs:attribute name="IsImported" type="xs:boolean" use="optional" default="false"/>
+        <xs:attribute name="IsLocallyExecutable" type="xs:boolean" use="optional" default="true"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+  <xs:complexType name="AutomaticTaskTemplate">
+    <xs:complexContent>
+      <xs:extension base="TaskTemplate">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+	<xs:simpleType name="TaskFileType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="None"/>
+			<xs:enumeration value="NativeSource"/>
+			<xs:enumeration value="BilingualSource"/>
+			<xs:enumeration value="BilingualTarget"/>
+			<xs:enumeration value="NativeTarget"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WorkflowStageType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Translation"/>
+			<xs:enumeration value="Review"/>
+			<xs:enumeration value="SignOff"/>
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="ImplementCustomerReview"/>
+      <xs:enumeration value="Unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--
+  <xs:complexType name="TranslationProviderCascade">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:sequence>
+          <xs:element name="TranslationProviderCascadeEntries">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="TranslationProvideCascadeEntry" type="ProjectTranslationProviderCascadeEntry" minOccurs="0" maxOccurs="unbounded"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+				<xs:attribute name="Name" type="xs:string" use="required"/>
+				<xs:attribute name="SearchMode" type="CascadeSearchMode" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+  <xs:complexType name="ProjectTranslationProviderCascadeEntry">
+    <xs:complexContent>
+      <xs:extension base="TranslationProviderCascadeEntry">
+        <xs:sequence>
+          <xs:element name="ProjectTranslationProvider" type="TranslationProvider" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="ProjectTranslationProviderEnabled" type="xs:boolean" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TranslationProviderCascadeEntry">
+    <xs:complexContent>
+      <xs:extension base="GenericItemWithSettings">
+        <xs:sequence>
+          <xs:element name="TranslationProvider" type="TranslationProvider" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="CascadeMode" type="xs:int" use="required"/>
+        <xs:attribute name="Penalty" type="xs:int" use="required"/>
+        <xs:attribute name="Updatable" type="xs:boolean" use="required"/>
+        <xs:attribute name="Enabled" type="xs:boolean" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TranslationProvider">
+    <xs:complexContent>
+      <xs:extension base="GenericItemWithSettings">
+        <xs:attribute name="Name" type="xs:string" use="required"/>
+        <xs:attribute name="Uri" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType> 
+	<xs:complexType name="FileBasedTranslationMemory">
+    <xs:complexContent>
+      <xs:extension base="TranslationProvider">
+        <xs:attribute name="Path" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+	<xs:complexType name="ServerBasedTranslationMemory">
+		<xs:complexContent>
+			<xs:extension base="TranslationProvider">
+				<xs:attribute name="ServerConnectionGuid" type="xs:string" use="required"/>
+        <xs:attribute name="OrganizationGuid" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ServerBasedMachineTranslation">
+		<xs:complexContent>
+			<xs:extension base="TranslationProvider">
+				<xs:attribute name="ServerConnectionGuid" type="xs:string" use="required"/>
+				<xs:attribute name="Sequence" type="xs:string" use="required"/>
+				<xs:attribute name="Project" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PluginTranslationProvider">
+		<xs:complexContent>
+			<xs:extension base="TranslationProvider">
+				<xs:sequence>
+					<xs:element name="Data" type="xs:string"/>
+				</xs:sequence>
+				<xs:attribute name="FactoryId" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+-->
+	<xs:simpleType name="ProjectStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Pending"/>
+			<xs:enumeration value="Started"/>
+			<xs:enumeration value="Completed"/>
+			<xs:enumeration value="Archived"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ProjectFile">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:sequence>
+					<xs:element name="SpecificTargetLanguages">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="SpecificTargetLanguage" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="LanguageFiles">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="LanguageFile" type="LanguageFile" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="PreviousBilingualFiles">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="PreviousBilingualFile" type="PreviousBilingualFile" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="ParentProjectFileGuid" type="xs:string" use="optional"/>
+				<xs:attribute name="FilterDefinitionId" type="xs:string" use="optional"/>
+				<xs:attribute name="Name" type="xs:string" use="required"/>
+				<xs:attribute name="Path" type="xs:string" use="required"/>
+				<xs:attribute name="Role" type="FileRole" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="LanguageFile">
+		<xs:complexContent>
+			<xs:extension base="GenericItemWithSettings">
+				<xs:sequence>
+					<xs:element name="FileVersions">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="FileVersion" type="FileVersion" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="AnalysisStatistics" type="AnalysisStatistics" minOccurs="0"/>
+					<xs:element name="ConfirmationStatistics" type="ConfirmationStatistics" minOccurs="0"/>
+					<xs:element name="TQAData" type="TQAData" minOccurs="0"/>
+					<xs:element name="ChildFiles" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="LanguageFileRef" type="LanguageFileRef" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="LanguageCode" type="xs:string" use="required"/>
+				<xs:attribute name="MergeState" type="MergeState" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FileVersion">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:attribute name="VersionNumber" type="xs:int" use="required"/>
+				<xs:attribute name="Size" type="xs:long" use="required"/>
+				<xs:attribute name="FileName" type="xs:string" use="required"/>
+				<xs:attribute name="PhysicalPath" type="xs:string" use="required"/>
+				<xs:attribute name="Comment" type="xs:string" use="optional"/>
+				<xs:attribute name="CreatedBy" type="xs:string" use="required"/>
+				<xs:attribute name="CreatedAt" type="xs:dateTime" use="required"/>
+				<xs:attribute name="FileTimeStamp" type="xs:dateTime" use="required"/>
+				<xs:attribute name="IsAutoUpload" type="xs:boolean" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="FileRole">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Unknown"/>
+			<xs:enumeration value="Translatable"/>
+			<xs:enumeration value="Localizable"/>
+			<xs:enumeration value="Reference"/>
+			<xs:enumeration value="Auxiliary"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Task">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:sequence>
+					<xs:element name="TaskTemplateIds">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="TaskTemplateId" type="xs:string" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Files">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="TaskFile" type="TaskFile" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="OutputFiles" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="OutputFile" type="OutputFile" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Reports">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Report" type="TaskReport" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Parameters">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="TaskParameter" type="TaskParameter" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Result" type="ExecutionResult"/>
+				</xs:sequence>
+				<xs:attribute name="PredecessorTaskGuid" type="xs:string" use="optional"/>
+				<xs:attribute name="CreatedAt" type="xs:dateTime" use="required"/>
+				<xs:attribute name="CreatedBy" type="xs:string" use="required"/>
+				<xs:attribute name="StartedAt" type="xs:dateTime" use="optional"/>
+				<xs:attribute name="CompletedAt" type="xs:dateTime" use="optional"/>
+				<xs:attribute name="Status" type="TaskStatus" use="required"/>
+				<xs:attribute name="PercentComplete" type="xs:int" use="required"/>
+				<xs:attribute name="ComplexTaskTemplateId" type="xs:string" use="optional"/>
+        <xs:attribute name="Comment" type="xs:string" use="optional"/>
+        <xs:attribute name="Name" type="xs:string" use="optional"/>
+        <xs:attribute name="Description" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="TaskStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Invalid"/>
+			<xs:enumeration value="Created"/>
+			<xs:enumeration value="Assigned"/>
+			<xs:enumeration value="Started"/>
+			<xs:enumeration value="Rejected"/>
+			<xs:enumeration value="Completed"/>
+			<xs:enumeration value="PartiallyCompleted"/>
+			<xs:enumeration value="Failed"/>
+			<xs:enumeration value="Cancelling"/>
+			<xs:enumeration value="Cancelled"/>
+      <xs:enumeration value="Skipped"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TaskFile">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:sequence>
+					<xs:element name="Result" type="ExecutionResult"/>
+				</xs:sequence>
+				<xs:attribute name="LanguageFileGuid" type="xs:string" use="required"/>
+				<xs:attribute name="Purpose" type="TaskFilePurpose" use="required"/>
+				<xs:attribute name="Completed" type="xs:boolean" use="required"/>
+				<xs:attribute name="ParentTaskFileGuid" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="OutputFile">
+		<xs:attribute name="LanguageFileGuid" type="xs:string" use="required"/>
+		<xs:attribute name="Purpose" type="TaskFilePurpose" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="TaskFilePurpose">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Invalid"/>
+			<xs:enumeration value="WorkFile"/>
+			<xs:enumeration value="ReferenceFile"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TaskReport">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:attribute name="Name" type="xs:string" use="required"/>
+				<xs:attribute name="Description" type="xs:string" use="required"/>
+				<xs:attribute name="TaskTemplateId" type="xs:string" use="optional"/>
+				<xs:attribute name="LanguageDirectionGuid" type="xs:string" use="required"/>
+				<xs:attribute name="PhysicalPath" type="xs:string" use="required"/>
+        <xs:attribute name="IsCustomReport" type="xs:boolean" use="optional" default="false" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ManualTask">
+		<xs:complexContent>
+			<xs:extension base="Task">
+				<xs:attribute name="AssignedBy" type="xs:string" use="optional"/>
+				<xs:attribute name="AssignedTo" type="xs:string" use="optional"/>
+				<xs:attribute name="AssignedAt" type="xs:dateTime" use="optional"/>
+				<xs:attribute name="DueDate" type="xs:dateTime" use="optional"/>
+				
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AutomaticTask">
+		<xs:complexContent>
+			<xs:extension base="Task"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="GenericItem">
+		<xs:attribute name="Guid" type="xs:string" use="required"/>
+		<xs:attribute name="ExternalId" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="Workflow">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:sequence>
+					<xs:element name="ComplexTaskTemplates">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ComplexTaskTemplate" type="ComplexTaskTemplate" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ManualTaskTemplates">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ManualTaskTemplate" type="ManualTaskTemplate" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+          <xs:element name="AutomaticTaskTemplates" minOccurs="0">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AutomaticTaskTemplate" type="AutomaticTaskTemplate" minOccurs="0" maxOccurs="unbounded"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="GenericItemWithSettings">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:attribute name="SettingsBundleGuid" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="User">
+		<xs:attribute name="UserId" type="xs:string" use="required"/>
+		<xs:attribute name="FullName" type="xs:string" use="optional"/>
+		<xs:attribute name="Description" type="xs:string" use="optional"/>
+		<xs:attribute name="Email" type="xs:string" use="optional"/>
+		<xs:attribute name="PhoneNumber" type="xs:string" use="optional"/>
+		<xs:attribute name="EmailType" type="EmailType" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="EmailType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="None"/>
+			<xs:enumeration value="Smtp"/>
+			<xs:enumeration value="MicrosoftExchange"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="FilterDefinition">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:sequence>
+					<xs:element name="Content" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="FilterDefinitionFileName" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PreviousBilingualFile">
+		<xs:attribute name="TargetLanguageCode" type="xs:string" use="required"/>
+		<xs:attribute name="PhysicalPath" type="xs:string" use="required"/>
+		<xs:attribute name="IsReviewed" type="xs:boolean" use="required"/>
+	</xs:complexType>
+	<!--
+	<xs:simpleType name="ServerConnectionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Tcp"/>
+			<xs:enumeration value="Http"/>
+      <xs:enumeration value="Ipc"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ServerConnectionProfile">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:attribute name="Name" type="xs:string" use="required"/>
+				<xs:attribute name="Type" type="ServerConnectionType" use="required"/>
+				<xs:attribute name="Server" type="xs:string" use="required"/>
+				<xs:attribute name="Port" type="xs:int" use="required"/>
+				<xs:attribute name="UseSecureConnection" type="xs:boolean" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+-->
+	<xs:complexType name="PackageOperation">
+		<xs:sequence>
+			<xs:element name="Tasks">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TaskRef" type="TaskRef" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Files">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TaskFileRef" type="TaskFileRef" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Result" type="ExecutionResult"/>
+		</xs:sequence>
+		<xs:attribute name="Guid" type="xs:string" use="required"/>
+		<xs:attribute name="Status" type="PackageStatus" use="required"/>
+		<xs:attribute name="PercentComplete" type="xs:int" use="required"/>
+		<xs:attribute name="PackageName" type="xs:string" use="required"/>
+		<xs:attribute name="Comment" type="xs:string" use="optional"/>
+		<xs:attribute name="PackageGuid" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="PackageStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Invalid"/>
+			<xs:enumeration value="NotStarted"/>
+			<xs:enumeration value="Scheduled"/>
+			<xs:enumeration value="InProgress"/>
+			<xs:enumeration value="Failed"/>
+			<xs:enumeration value="Completed"/>
+			<xs:enumeration value="Cancelling"/>
+			<xs:enumeration value="Cancelled"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="PackageCreation">
+		<xs:complexContent>
+			<xs:extension base="PackageOperation">
+				<xs:attribute name="Path" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PackageImport">
+		<xs:complexContent>
+			<xs:extension base="PackageOperation">
+				<xs:attribute name="Path" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProjectPackageCreation">
+		<xs:complexContent>
+			<xs:extension base="PackageCreation"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProjectPackageImport">
+		<xs:complexContent>
+			<xs:extension base="PackageImport"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ReturnPackageCreation">
+		<xs:complexContent>
+			<xs:extension base="PackageCreation"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ReturnPackageImport">
+		<xs:complexContent>
+			<xs:extension base="PackageImport"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PackageOperations">
+		<xs:sequence>
+			<xs:element name="ProjectPackageCreationOperations">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ProjectPackageCreation" type="ProjectPackageCreation" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ProjectPackageImportOperations">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ProjectPackageImport" type="ProjectPackageImport" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ReturnPackageCreationOperations">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ReturnPackageCreation" type="ReturnPackageCreation" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ReturnPackageImportOperations">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ReturnPackageImport" type="ReturnPackageImport" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LanguageFileRef">
+		<xs:attribute name="LanguageFileGuid" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TaskFileRef">
+		<xs:attribute name="TaskFileGuid" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Customer">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:attribute name="Name" type="xs:string" use="required"/>
+				<xs:attribute name="Email" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TaskParameter">
+		<xs:sequence>
+			<xs:element name="Value" type="xs:anyType"/>
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="PackageType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ProjectPackage"/>
+			<xs:enumeration value="ReturnPackage"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="LocalProjectServerInfo">
+		<xs:attribute name="LocalDataFolder" type="xs:string"/>
+		<xs:attribute name="UserId" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="ManualTaskIndexEntry">
+		<xs:attribute name="TaskGuid" type="xs:string"/>
+		<xs:attribute name="ProjectGuid" type="xs:string"/>
+		<xs:attribute name="TaskDueDate" type="xs:dateTime"/>
+	</xs:complexType>
+	<!--
+	<xs:complexType name="ContainerToken">
+		<xs:sequence>
+			<xs:any namespace="##other"/>
+		</xs:sequence>
+	</xs:complexType>
+-->
+	<xs:complexType name="SettingsBundle">
+		<xs:complexContent>
+			<xs:extension base="GenericItem">
+				<xs:sequence>
+					<xs:any processContents="skip"/>
+				</xs:sequence>
+				<xs:attribute name="Name" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProjectConfiguration">
+		<xs:complexContent>
+			<xs:extension base="GenericItemWithSettings">
+				<xs:sequence>
+          <xs:element name="LanguageDirections">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="LanguageDirection" type="LanguageDirection" minOccurs="0"  maxOccurs="unbounded"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TermbaseConfiguration" type="TermbaseConfiguration" minOccurs="0" />
+          <xs:element name="SettingsBundles" minOccurs="0" >
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="SettingsBundle" type="SettingsBundle" minOccurs="0" maxOccurs="unbounded"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="InitialTaskTemplate" type="ComplexTaskTemplate" minOccurs="0" />
+          <xs:element name="AnalysisBands" minOccurs="0" >
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AnalysisBand" type="AnalysisBand" minOccurs="0" maxOccurs="unbounded"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ManualTaskTemplates" minOccurs="0" >
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ManualTaskTemplate" type="ManualTaskTemplate" minOccurs="0" maxOccurs="unbounded"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Users" minOccurs="0" >
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="User" type="User" minOccurs="0" maxOccurs="unbounded"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="CascadeItem" type="CascadeItem" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="LanguageResourceFilePath" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FilterConfiguration">
+    <xs:sequence>
+			<xs:element name="FilterManagerConfigFileContent" type="xs:string"/>
+			<xs:element name="FilterDefinitions">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="FilterDefinition" type="FilterDefinition" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="MergeState">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NotMerged"/>
+			<xs:enumeration value="Merged"/>
+			<xs:enumeration value="Split"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ExecutionResult">
+		<xs:sequence>
+			<xs:element name="Messages" type="ExecutionMessage" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="Guid" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="ExecutionMessage">
+		<xs:sequence>
+			<xs:element name="ExceptionData" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="Source" type="xs:string" use="required"/>
+		<xs:attribute name="Message" type="xs:string" use="required"/>
+		<xs:attribute name="Level" type="MessageLevel" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="MessageLevel">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Information"/>
+			<xs:enumeration value="Warning"/>
+			<xs:enumeration value="Error"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="WordCountStatistics">
+		<xs:sequence>
+			<xs:element name="Total" type="CountData"/>
+			<xs:element name="Repetitions" type="CountData"/>
+		</xs:sequence>
+		<xs:attribute name="WordCountStatus" type="ValueStatus" use="required"/>
+		<xs:attribute name="WordCountFileTimeStamp" type="xs:dateTime" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="AnalysisStatistics">
+		<xs:complexContent>
+			<xs:extension base="WordCountStatistics">
+				<xs:sequence>
+					<xs:element name="Perfect" type="CountData"/>
+					<xs:element name="InContextExact" type="CountData"/>
+					<xs:element name="Exact" type="CountData"/>
+					<xs:element name="Fuzzy">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="CountData" type="CountData" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="New" type="CountData"/>
+          			<xs:element name="Locked" type="CountData"/>
+				</xs:sequence>
+				<xs:attribute name="AnalysisStatus" type="ValueStatus" use="required"/>
+				<xs:attribute name="AnalysisFileTimeStamp" type="xs:dateTime" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CountData">
+		<xs:attribute name="Words" type="xs:int" use="required"/>
+		<xs:attribute name="Characters" type="xs:int" use="required"/>
+		<xs:attribute name="Segments" type="xs:int" use="required"/>
+		<xs:attribute name="Placeables" type="xs:int" use="required"/>
+		<xs:attribute name="Tags" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TQAData">
+		<xs:attribute name="TQAResult" type="xs:boolean" use="required"/>
+		<xs:attribute name="DocumentCategory" type="xs:string" use="required"/>
+		<xs:attribute name="EvaluationComment" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="AnalysisBand">
+		<xs:attribute name="MinimumMatchValue" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="ValueStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Complete"/>
+			<xs:enumeration value="Partial"/>
+			<xs:enumeration value="OutOfDate"/>
+			<xs:enumeration value="None"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ConfirmationStatistics">
+		<xs:sequence minOccurs="0">
+			<xs:element name="Unspecified" type="CountData"/>
+			<xs:element name="Draft" type="CountData"/>
+			<xs:element name="Translated" type="CountData"/>
+			<xs:element name="RejectedTranslation" type="CountData"/>
+			<xs:element name="ApprovedTranslation" type="CountData"/>
+			<xs:element name="RejectedSignOff" type="CountData"/>
+			<xs:element name="ApprovedSignOff" type="CountData"/>
+		</xs:sequence>
+		<xs:attribute name="Status" type="ValueStatus" use="required"/>
+		<xs:attribute name="FileTimeStamp" type="xs:dateTime" use="optional"/>
+	</xs:complexType>
+	<!--
+	<xs:complexType name="ProjectTranslationMemory">
+		<xs:sequence minOccurs="0">
+			<xs:element name="TranslationProvider" type="TranslationProvider"/>
+		</xs:sequence>
+		<xs:attribute name="MasterTranslationMemoryUri" type="xs:string" use="optional"/>
+	</xs:complexType>
+-->
+	<xs:complexType name="AutoSuggestDictionary">
+		<xs:attribute name="FilePath" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TermbaseConfiguration">
+		<xs:sequence>
+			<xs:element name="TermbaseServer" type="TermbaseServer" minOccurs="0"/>
+			<xs:element name="Termbases" type="Termbase" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="LanguageIndexMappings" type="TermbaseLanguageIndexMapping" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="RecognitionOptions" type="TermbaseRecognitionOptions"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Termbase">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="SettingsXml" type="xs:string"/>
+			<xs:element name="Filter" type="TermbaseFilter" minOccurs="0"/>
+			<xs:element name="Enabled" type="xs:boolean" default="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TermbaseServer">
+		<xs:sequence>
+			<xs:element name="ServerConnectionUri" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TermbaseLanguageIndexMapping">
+		<xs:sequence>
+			<xs:element name="Language" type="xs:string"/>
+			<xs:element name="Index" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TermbaseRecognitionOptions">
+		<xs:sequence>
+			<xs:element name="ShowWithNoAvailableTranslation" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="MinimumMatchValue" type="xs:int"/>
+			<xs:element name="SearchDepth" type="xs:int"/>
+			<xs:element name="SearchOrder" type="TermbaseSearchOrder" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TermbaseSearchOrder">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Hierarchical"/>
+			<xs:enumeration value="Sequential"/>
+			<xs:enumeration value="Parallel"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TermbaseFilter">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:int"/>
+			<xs:element name="Name" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TaskRef">
+		<xs:attribute name="TaskGuid" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="CascadeItem">
+		<xs:sequence>
+			<xs:element name="CascadeEntryItem" type="CascadeEntryItem" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="StopSearchingWhenResultsFound" type="xs:boolean" use="required"/>
+		<xs:attribute name="OverrideParent" type="xs:boolean" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="CascadeEntryItem">
+		<xs:sequence>
+			<xs:element name="MainTranslationProviderItem" type="TranslationProviderItem" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ProjectTranslationProviderItem" type="TranslationProviderItem" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="PerformUpdate" type="xs:boolean" use="required"/>
+		<xs:attribute name="PerformNormalSearch" type="xs:boolean" use="required"/>
+		<xs:attribute name="PerformConcordanceSearch" type="xs:boolean" use="required"/>
+		<xs:attribute name="Penalty" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TranslationProviderItem">
+		<xs:attribute name="Uri" type="xs:string" use="required"/>
+		<xs:attribute name="State" type="xs:string" use="optional"/>
+		<xs:attribute name="Enabled" type="xs:boolean" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="PackageLicenseInfo">
+		<xs:sequence>
+			<xs:element name="Grant" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+						<xs:attribute name="Feature" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<ProjectServer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///c:/Source/Development/Src/Sdl/ProjectApi/Implementation/Xml/ProjectApiObjects.xsd"  Version="3.3.0.0">
+  <Workflow Guid="00000000-0000-0000-0000-000000000001" InitialTaskTemplateId="Sdl.ProjectApi.AutomaticTask.Prepare.NoProjectTM">
+    <ComplexTaskTemplates>
+      <ComplexTaskTemplate Description="ComplexTask_Prepare_NoProjectTM_Description" Name="ComplexTask_Prepare_NoProjectTM_Name" Id="Sdl.ProjectApi.AutomaticTask.Prepare.NoProjectTM">
+        <SubTaskTemplates>
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Conversion" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Split" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.PerfectMatch" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Translate" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Analysis" />
+        </SubTaskTemplates>
+      </ComplexTaskTemplate>
+      <ComplexTaskTemplate Description="ComplexTask_Prepare_Description" Name="ComplexTask_Prepare_Name" Id="Sdl.ProjectApi.AutomaticTask.Prepare">
+        <SubTaskTemplates>
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Conversion" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Split" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.PerfectMatch" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Translate" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Analysis" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.ProjectTm" />
+        </SubTaskTemplates>
+      </ComplexTaskTemplate>
+      <ComplexTaskTemplate Description="ComplexTask_AnalyzeOnly_Description" Name="ComplexTask_AnalyzeOnly_Name" Id="Sdl.ProjectApi.AutomaticTask.AnalyzeOnly">
+        <SubTaskTemplates>
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Conversion" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Split" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Analysis" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.ProjectTm" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.TranslationCount" />
+        </SubTaskTemplates>
+      </ComplexTaskTemplate>
+      <ComplexTaskTemplate Description="ComplexTask_Finalize_Description" Name="ComplexTask_Finalize_Name" Id="Sdl.ProjectApi.AutomaticTask.Finalize">
+        <SubTaskTemplates>
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.UpdateMasterTm" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.GenerateTargetTranslation" />
+        </SubTaskTemplates>
+      </ComplexTaskTemplate>
+      <ComplexTaskTemplate Description="ComplexTask_PseudoTranslateRoundTrip_Description" Name="ComplexTask_PseudoTranslateRoundTrip_Name" Id="Sdl.ProjectApi.AutomaticTask.PseudoTranslateRoundTrip">
+        <SubTaskTemplates>
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Conversion" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Split" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.PseudoTranslate" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.GenerateTargetTranslation" />
+        </SubTaskTemplates>
+      </ComplexTaskTemplate>
+      <ComplexTaskTemplate Description="ComplexTask_TranslateAndAnalyze_Description" Name="ComplexTask_TranslateAndAnalyze_Name" Id="Sdl.ProjectApi.AutomaticTasks.TranslateAndAnalyze">
+        <SubTaskTemplates>
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Conversion" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.Split" />
+          <SubTaskTemplate TaskTemplateId="Sdl.ProjectApi.AutomaticTasks.TranslateAndAnalysis" />
+        </SubTaskTemplates>
+      </ComplexTaskTemplate>
+    </ComplexTaskTemplates>
+    <ManualTaskTemplates>
+      <ManualTaskTemplate Id="Sdl.ProjectApi.ManualTask.Translate" Name="ManualTask_Translate_Name" Description="ManualTask_Translate_Description" IsLocallyExecutable="true" WorkflowStageType="Translation"/>
+      <ManualTaskTemplate Id="Sdl.ProjectApi.ManualTask.Review" Name="ManualTask_Review_Name" Description="ManualTask_Review_Description" IsLocallyExecutable="true" WorkflowStageType="Review"/>
+      <ManualTaskTemplate Id="Sdl.ProjectApi.ManualTask.Error" Name="ManualTask_Error_Name" Description="ManualTask_Error_Description" WorkflowStageType="Review" IsLocallyExecutable="true"/>
+    </ManualTaskTemplates>
+    <AutomaticTaskTemplates />
+  </Workflow>
+  <Projects>
+  </Projects>
+  <ProjectTemplates>
+  </ProjectTemplates>
+  <Users>
+  </Users>
+  <Customers>
+  </Customers>
+</ProjectServer>
