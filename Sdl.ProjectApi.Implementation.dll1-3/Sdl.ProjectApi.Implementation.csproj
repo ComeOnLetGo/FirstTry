@@ -1,0 +1,89 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>Sdl.ProjectApi.Implementation</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Sdl.ProjectApi.Implementation.Xml.ProjectApiObjects.xsd" />
+    <None Remove="Sdl.ProjectApi.Implementation.Licensing.Perpetual.Studio30DayTrial.lic" />
+    <None Remove="Sdl.ProjectApi.Implementation.Licensing.Perpetual.StudioCommuter.lic" />
+    <None Remove="Sdl.ProjectApi.Implementation.Xml.ProjectServer.xml" />
+    <None Remove="Sdl.ProjectApi.Implementation.Xml.Application.xml" />
+    <None Remove="Sdl.ProjectApi.Implementation.Server.PackageToProject.xslt" />
+    <None Remove="Sdl.ProjectApi.Implementation.Server.ProjectToPackage.xslt" />
+    <EmbeddedResource Include="Sdl.ProjectApi.Implementation.Xml.ProjectApiObjects.xsd" LogicalName="Sdl.ProjectApi.Implementation.Xml.ProjectApiObjects.xsd" />
+    <EmbeddedResource Include="Sdl.ProjectApi.Implementation.Licensing.Perpetual.Studio30DayTrial.lic" LogicalName="Sdl.ProjectApi.Implementation.Licensing.Perpetual.Studio30DayTrial.lic" />
+    <EmbeddedResource Include="Sdl.ProjectApi.Implementation.Licensing.Perpetual.StudioCommuter.lic" LogicalName="Sdl.ProjectApi.Implementation.Licensing.Perpetual.StudioCommuter.lic" />
+    <EmbeddedResource Include="Sdl.ProjectApi.Implementation.Xml.ProjectServer.xml" LogicalName="Sdl.ProjectApi.Implementation.Xml.ProjectServer.xml" />
+    <EmbeddedResource Include="Sdl.ProjectApi.Implementation.Xml.Application.xml" LogicalName="Sdl.ProjectApi.Implementation.Xml.Application.xml" />
+    <EmbeddedResource Include="Sdl.ProjectApi.Implementation.Server.PackageToProject.xslt" LogicalName="Sdl.ProjectApi.Implementation.Server.PackageToProject.xslt" />
+    <EmbeddedResource Include="Sdl.ProjectApi.Implementation.Server.ProjectToPackage.xslt" LogicalName="Sdl.ProjectApi.Implementation.Server.ProjectToPackage.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="Sdl.ProjectApi" />
+    <Reference Include="Sdl.Core.Globalization" />
+    <Reference Include="Sdl.LanguagePlatform.TranslationMemoryApi" />
+    <Reference Include="Sdl.Core.Settings" />
+    <Reference Include="Sdl.FileTypeSupport.Framework.Core" />
+    <Reference Include="Sdl.Desktop.Platform" />
+    <Reference Include="Sdl.BestMatchServiceStudioIntegration.Common" />
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <Reference Include="Sdl.Terminology.TerminologyProvider.Core" />
+    <Reference Include="Sdl.Core.PluginFramework" />
+    <Reference Include="Sdl.ProjectAutomation.AutomaticTasks" />
+    <Reference Include="Sdl.ApiClientSdk.StudioBFF" />
+    <Reference Include="Sdl.LanguagePlatform.Core" />
+    <Reference Include="Sdl.Core.LanguageProcessing" />
+    <Reference Include="Sdl.LanguagePlatform.Lingua" />
+    <Reference Include="Sdl.MultiTerm.Core.Settings" />
+    <Reference Include="Sdl.ProjectApi.Reporting" />
+    <Reference Include="Sdl.MultiTerm.TMO.Interop" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sdl.MultiTerm.Client.TermAccess" />
+    <Reference Include="Sdl.MultiTerm.Core.Common" />
+    <Reference Include="Sdl.MultiTerm.Client.TerminologySearch" />
+    <Reference Include="Sdl.Desktop.Platform.ServerConnectionPlugin" />
+    <Reference Include="SmartThreadPool" />
+    <Reference Include="Sdl.BestMatchService.Common" />
+    <Reference Include="Sdl.LanguagePlatform.TranslationMemory" />
+    <Reference Include="Sdl.StudioServer.ProjectServer.Package" />
+    <Reference Include="SDL.ApiClientSDK.GS" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Sdl.Common.Licensing.Provider.Core" />
+    <Reference Include="Sdl.Common.Licensing.Provider.SafeNetRMS">
+      <HintPath>D:\翻译一条龙程序\trados翻译软件和按月付费的机器翻译插件\trados 2022安装包\Trados Studio 2022 SR1 Professional 17.1.6.16252\Crack\Sdl.Common.Licensing.Provider.SafeNetRMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="Sdl.Core.Globalization.Async" />
+    <Reference Include="Sdl.Versioning" />
+    <Reference Include="Sdl.Desktop.Logger" />
+    <Reference Include="Sdl.Core.Bcm.BcmModel" />
+    <Reference Include="Sdl.Core.Bcm.BcmConverters" />
+    <Reference Include="Sdl.FileTypeSupport.Framework.Implementation" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Reactive" />
+    <Reference Include="System.Security" />
+    <Reference Include="Sdl.Core.TM.ImportExport" />
+    <Reference Include="Sdl.Platform.Interfaces" />
+    <Reference Include="Sdl.ProjectApi.Reporting.XmlReporting" />
+    <Reference Include="Sdl.MultiTerm.Client.TerminologyProvider" />
+    <Reference Include="Sdl.DesktopEditor.Control" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="SharpCompress" />
+    <Reference Include="Sdl.MultiTerm.Core.Utilities" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Sdl.FileTypeSupport.Framework.Core.Utilities" />
+    <Reference Include="Sdl.LanguagePlatform.TranslationMemoryTools" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+</Project>

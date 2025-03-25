@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="PackageHelper_NoSynergyPackage" xml:space="preserve"><value>This is not an Trados Synergy package.</value></data>
+  <data name="InvalidLocalDataFolderException_Server_CantIntersect" xml:space="preserve"><value>The new local data folder cannot intersect with the old one.</value></data>
+  <data name="VersionUtil_InvalidProjectFileVersion" xml:space="preserve"><value>The package or project '{1}' cannot be opened because it contains a newer version of the project format ({0}) 
+not supported by your version of Trados Studio. Update to the latest Trados Studio release to open this package or project.</value></data>
+  <data name="ExecutingTaskFile_CannotUpdateWordCounts" xml:space="preserve"><value>You can only update the word count information of translatable files.</value></data>
+  <data name="ImportProjectTemplate_Cancelled" xml:space="preserve"><value>Import project template cancelled.</value></data>
+  <data name="ProjectPackageImport_ProjectIsServerProject" xml:space="preserve"><value>You cannot import this package, because you have already opened the project as a server project.</value></data>
+  <data name="VersionUtil_InvalidServerFileVersion" xml:space="preserve"><value>Unsupported server file version detected: {0}. The server cannot be accessed ({1}).</value></data>
+  <data name="PackageOperation_PropertyNotAvailable" xml:space="preserve"><value>This property is not available until the package operation is completed.</value></data>
+  <data name="Project_ErrorDeserializing" xml:space="preserve"><value>Failed to load project from '{1}': {2}</value></data>
+  <data name="AttachProject_Cancelled" xml:space="preserve"><value>Import project cancelled.</value></data>
+  <data name="TranslationMemoryServer_CannotGetDefaultCredential" xml:space="preserve"><value>Cannot get the default translation memory server crdential, because there is no default connection profile.</value></data>
+  <data name="ProjectPackageCreation_CannotFindProjectTm" xml:space="preserve"><value>Cannot find project tm.</value></data>
+  <data name="ProjectTemplate_ErrorSerializing" xml:space="preserve"><value>Failed to save project template '{0}' to '{1}': {2}</value></data>
+  <data name="TranslatableFile_OnlyOnePreviousBilingualFilePerTargetLanguage" xml:space="preserve"><value>You can only add one previous bilingual file per target language. </value></data>
+  <data name="TranslatableFile_CannotGetBilingualReferenceFileForSource" xml:space="preserve"><value>Cannot get this property for a source language file.</value></data>
+  <data name="ProjectPackageImport_ProjectNotImported" xml:space="preserve"><value>You cannot import this package, because you created the project yourself.</value></data>
+  <data name="ReturnPackageImport_SourceFileDoesNotExist" xml:space="preserve"><value>Failed to import return package, because it contains a source file that does not exist in project '{0}' (Name='{0}', ID='{1}').</value></data>
+  <data name="Report_ErrorCreatingReportFolder" xml:space="preserve"><value>Failed to create report folder.</value></data>
+  <data name="TranslationMemory_InvalidSourceLanguage" xml:space="preserve"><value>This translation memory has a different source language than the project source language.</value></data>
+  <data name="Worklow_InvalidFileStatusOrdinal" xml:space="preserve"><value>The specified file status ordinal is invalid. It must be a positive number between 0 and the number of file statuses in the workflow.</value></data>
+  <data name="VersionUtil_InvalidProjectTemplateFileVersion" xml:space="preserve"><value>Unsupported project template file version detected: {0}. The project template cannot be loaded ({1}).</value></data>
+  <data name="Server_ErrorLoadingXmlFile" xml:space="preserve"><value>Failed to load project data from '{0}': {1}</value></data>
+  <data name="ProjectPackageImport_MultipleSourceLanguagesNotSupported" xml:space="preserve"><value>This package contains a project with multiple source languages. This is not supported.</value></data>
+  <data name="ProjectTrackingHelper_FailedToCheckProjectExists" xml:space="preserve"><value>Failed to check whether the project exists on the server: {0}</value></data>
+  <data name="PackageHelper_WrongPackageVersion" xml:space="preserve"><value>This version of Trados Synergy does not support version {0} packages.</value></data>
+  <data name="TaskReportTypeManager_TaskTempateDoesNotExist" xml:space="preserve"><value>There is no task template with GUID '{0}'.</value></data>
+  <data name="Project_CreateMergedTranslatableFile_A_merged_file_should_have_the_file_role_translatable" xml:space="preserve"><value>All child files belonging to a merged file should have the file role Translatable.</value></data>
+  <data name="TranslatableFile_CannotRemoveBilingualReferenceFilesForTarget" xml:space="preserve"><value>This method should not be used on a target language file.</value></data>
+  <data name="ProjectPackageConverter_UnableToCreatePackageFileTypesFolder" xml:space="preserve"><value>The Studio 2009 package convertor cannot create package "File Types" folder.</value></data>
+  <data name="VersionUtil_InvalidOlderProjectFileVersion" xml:space="preserve"><value>The project '{1}' cannot be opened because it contains an earlier version of the project format ({0}).</value></data>
+  <data name="PackageImport_NoProjectFound" xml:space="preserve"><value>This package does not contain any project information.</value></data>
+  <data name="ProjectPackageImport_Error" xml:space="preserve"><value>Fail to import the termbase '{0}'</value></data>
+  <data name="ImportProject_LanguagesNotSupported" xml:space="preserve"><value>The project cannot be opened because the following project languages are not supported on this computer: {0}.</value></data>
+  <data name="ProjectTrackingService_FailedToGetProject" xml:space="preserve"><value>Failed to retrieve project tracking info: {0}</value></data>
+  <data name="Project_FileTypeInformationNotFound" xml:space="preserve"><value>There is no  file type information with guid '{0}' on this project.</value></data>
+  <data name="TranslationMemory_MissingTargetLanguage" xml:space="preserve"><value>This translation memory does not contain target language {0}.</value></data>
+  <data name="ProjectTrackingHelper_FileStatusUpdateFailed" xml:space="preserve"><value>Failed to update file status on the server: {0}</value></data>
+  <data name="RemoteServer_ProjectTrackingService_FailedToConnect" xml:space="preserve"><value>Failed to connect to the project tracking web service: {0}</value></data>
+  <data name="OpenServerProject_AlreadyOpen" xml:space="preserve"><value>The specified project has already been opened.</value></data>
+  <data name="ProjectTrackingService_LogoutFailed" xml:space="preserve"><value>Failed to logout from server.</value></data>
+  <data name="InvalidLocalDataFolderException_Server_ShouldBeEmpty" xml:space="preserve"><value>The server local data folder can only be set to an empty or non-existing directory.</value></data>
+  <data name="AutomaticTaskExecutor_TaskFailed" xml:space="preserve"><value>Task failed for all task files.</value></data>
+  <data name="Report_ErrorCreatingReport" xml:space="preserve"><value>Failed to create report.</value></data>
+  <data name="ProjectPackageImport_FileNotFound" xml:space="preserve"><value>File '{0}' not found when importing the termbase '{1}'</value></data>
+  <data name="Workflow_FileStatusAlreadyExists" xml:space="preserve"><value>This workflow already contains a file status named '{0}'.</value></data>
+  <data name="ReturnPackageImport_TargetFileIsReferenceFile" xml:space="preserve"><value>Failed to import return package, because it contains a target file that corresponds to a reference file in project '{0}' (Name='{0}', ID='{1}').</value></data>
+  <data name="RemoteServer_CannotPublishProjectFromDifferentServer" xml:space="preserve"><value>You can only publish a project on the server it belongs to.</value></data>
+  <data name="ProjectTemplate_ErrorDeserializing" xml:space="preserve"><value>Failed to load project template from '{1}': {2}</value></data>
+  <data name="VersionUtil_GetFileVersionError" xml:space="preserve"><value>An error occured whilst trying to determine the file version.</value></data>
+  <data name="Project_ProjectAlreadyExists" xml:space="preserve"><value>The project with GUID '{0}' already exists on this server.</value></data>
+  <data name="OpenServerProject_NonEmptyLocaldataFolder" xml:space="preserve"><value>The local project folder should be an empty or non-existing directory.</value></data>
+  <data name="Task_ParameterAlreadyExists" xml:space="preserve"><value>This task already contains a parameter named '{0}'.</value></data>
+  <data name="Server_CustomerNameEmpty" xml:space="preserve"><value>Customers must have a name.</value></data>
+  <data name="TranslationMemory_PhysicalTranslationMemoryAlreadyHasParent" xml:space="preserve"><value>The specified physical translation memory is already part of another translationmemory. You have to remove it from the original translation first.</value></data>
+  <data name="ReturnPackageImport_ServerDoesNotExist" xml:space="preserve"><value>Failed to import return package, because it contains a project that was created with on a server that does not exist in your setup.</value></data>
+  <data name="RemoteServer_ImportProject_NotLoggedIn" xml:space="preserve"><value>You cannot import a project to a server if you are not logged in.</value></data>
+  <data name="OpenServerProject_CannotCancelNotInProgress" xml:space="preserve"><value>The open project operation cannot be cancelled because it is not running.</value></data>
+  <data name="ProjectTemplate_ProjectTemplateAlreadyExists" xml:space="preserve"><value>The project template with GUID '{0}' already exists on this server.</value></data>
+  <data name="TranslatableFile_CannotSetBilingualReferenceFileForSource" xml:space="preserve"><value>Cannot set this property for a source language file.</value></data>
+  <data name="ProjectTrackingHelper_SocketException_ConnectionRefused" xml:space="preserve"><value>The Project Tracking Server is not running or the specified port is wrong.</value></data>
+  <data name="RemoteServer_ProjectTrackingService_RequiresLogon" xml:space="preserve"><value>You have to log in first before accessing the project tracking service.</value></data>
+  <data name="ProjectPackageImport_FileAlreadyExistsLocally" xml:space="preserve"><value>The selected file is already available in Trados Studio. Open the file in the Editor view to check for version conflicts and sync any changes.</value></data>
+  <data name="PackageProject_ProjectFileNotFound" xml:space="preserve"><value>The package project file was not found. A package should contain exactly one project file.</value></data>
+  <data name="TranslationMemory_InvalidTargetLanguage" xml:space="preserve"><value>This translation memory has a target language that is not one of the project target languages.</value></data>
+  <data name="PackageImport_OnlyOneProjectSupported" xml:space="preserve"><value>This package contains information for multiple projects. This is not supported.</value></data>
+  <data name="ReturnPackageImport_TargetFileDoesNotExist" xml:space="preserve"><value>Failed to import return package, because it contains a target file that does not exist in project '{0}' (Name='{0}', ID='{1}').</value></data>
+  <data name="Server_ErrorSavingXmlFile" xml:space="preserve"><value>Failed to save project data to '{0}': {1}</value></data>
+  <data name="ProjectTrackingHelper_SocketException_HostNotFound" xml:space="preserve"><value>The specified Project Tracking Server could not be found.</value></data>
+  <data name="OpenServerProjectPackageImport_LocalProjectFolderNotEmpty" xml:space="preserve"><value>The selected local project folder is not empty.</value></data>
+  <data name="ProjectPackageImport_PackageXmlExtensionNotFound" xml:space="preserve"><value>This package is missing some information ({0}).</value></data>
+  <data name="OpenServerProject_CannotCancelAlreadyCancelling" xml:space="preserve"><value>The open project operation is already cancelling.</value></data>
+  <data name="Project_ApplySynchronizationInfo_expects_dueDate_specified_lical_timezone" xml:space="preserve"><value>ApplySynchronizationInfo expects dueDate to be specified in the local timezone.</value></data>
+  <data name="InvalidLocalDataFolderException_Project_InvalidCharacters" xml:space="preserve"><value>The project local data folder cannot contain any of the following characters: {0}</value></data>
+  <data name="PackageImport_CannotGetFilesBeforeImported" xml:space="preserve"><value>You cannot access the package files before the package has been imported.</value></data>
+  <data name="AutomaticTaskExecuter_TypeIsNoIAutomaticTaskImplementation" xml:space="preserve"><value>The automatic task type '{0}' for task '{1}' does not implement IAutomaticTaskImplementation.</value></data>
+  <data name="Project_ErrorLoading" xml:space="preserve"><value>Failed to load project '{0}': {1}</value></data>
+  <data name="ReturnPackageImport_Cancelled" xml:space="preserve"><value>Package import cancelled.</value></data>
+  <data name="Application_ErrorSerializing" xml:space="preserve"><value>Failed to save application settings to '{0}': {1}</value></data>
+  <data name="ServerConnectionProfile_DefaultShouldBeInList" xml:space="preserve"><value>The default server connection profile should be part of the list of server connection profiles.</value></data>
+  <data name="VersionUtil_FileVersionNotFound" xml:space="preserve"><value>The file version could not be found.</value></data>
+  <data name="TranslationMemoryServer_CannotGetConnectionUri" xml:space="preserve"><value>Cannot get the translation memory server connection URI, because there is no default connection profile.</value></data>
+  <data name="VersionUtil_InvalidApplicationFileVersion" xml:space="preserve"><value>Unsupported application file version detected: {0}. The application cannot be created ({1}).</value></data>
+  <data name="ProjectTrackingService_ErrorDeserializing" xml:space="preserve"><value>Failed to deserialize project tracking xml.</value></data>
+  <data name="ProjectPackageImport_CreatedYourself" xml:space="preserve"><value>Failed to import project package, because you created it yourself.</value></data>
+  <data name="AutomaticTaskExecuter_CouldNotLoadType" xml:space="preserve"><value>Could not load implementation of task '{0}' (type='{1}').</value></data>
+  <data name="ProjectPackageImport_WrongFileRole" xml:space="preserve"><value>This package contains a file that already exists in this project, but is of a different type ({0}).</value></data>
+  <data name="RemoteServer_ProjectTrackingService_InvalidUserName" xml:space="preserve"><value>The specified user name is invalid.</value></data>
+  <data name="ReturnPackageImport_CreatedYourself" xml:space="preserve"><value>Failed to import return package, because you created it yourself.</value></data>
+  <data name="ProjectPackageCreation_TaskFailed" xml:space="preserve"><value>{0} task failed: {1}</value></data>
+  <data name="Project_CreateMergedTranslatableFile_A_merged_file_should_have_the_same_language" xml:space="preserve"><value>All child files belonging to a merged file should have the same language.</value></data>
+  <data name="PackagePreviewInfo_ErrorSerializing" xml:space="preserve"><value>Failed to create package preview data: {0}</value></data>
+  <data name="TaskReportTypeManager_TaskTemplateIsNotAutomatic" xml:space="preserve"><value>Only automatic task templates support reports.</value></data>
+  <data name="OpenServerProjectOperation_ProjectDeleted" xml:space="preserve"><value>The project with ID '{0}' does not exist on the server.</value></data>
+  <data name="TaskReportTypeManager_NoReportDefinitionForTaskTemplate" xml:space="preserve"><value>There is no report definition for automatic task type '{0}'.</value></data>
+  <data name="PackagePreviewInfo_PackageFileDoesNotExist" xml:space="preserve"><value>This package does not contain a file with ID '{0}'.</value></data>
+  <data name="InvalidLocalDataFolderException_Project_CantIntersect" xml:space="preserve"><value>The new local data folder cannot intersect with the old one.</value></data>
+  <data name="TranslatableFile_CannotGetBilingualReferenceFilesForTarget" xml:space="preserve"><value>This method should not be used on a target language file.</value></data>
+  <data name="ExecutingTaskFile_CannotUpdateUntranslatedWordCount" xml:space="preserve"><value>You can only update the untranslated word count of translatable files.</value></data>
+  <data name="ProjectFileMigration_UnableToDetermineProjectFileType" xml:space="preserve"><value>An error occured whilst trying to determine the project file type.</value></data>
+  <data name="ProjectPackageImport_Cancelled" xml:space="preserve"><value>Package import cancelled.</value></data>
+  <data name="PackageImport_LocalServerNotFound" xml:space="preserve"><value>The repository for projects not tracked online could not be found.</value></data>
+  <data name="OpenServerProjectOperation_NoPermissions" xml:space="preserve"><value>You do not have the required permissions to open the project.</value></data>
+  <data name="Project_CreateMergedTranslatableFile_A_merged_file_should_consist_of_at_least_2_child_files_" xml:space="preserve"><value>A merged file should consist of at least 2 child files.</value></data>
+  <data name="ProjectPackageCreation_CouldNotFindTaskTemplate" xml:space="preserve"><value>Could not find the task template for creating project packages ('CreateProjectPackage').</value></data>
+  <data name="Report_ErrorUpdatingReport" xml:space="preserve"><value>Failed to update report.</value></data>
+  <data name="InvalidLocalDataFolderException_Project_ShouldBeEmpty" xml:space="preserve"><value>The project local data folder should not contain any other project files.</value></data>
+  <data name="OpenServerProject_CannotExecuteStillRunning" xml:space="preserve"><value>The open project operation is already running.</value></data>
+  <data name="ProjectTrackingService_FailedToCreateProject" xml:space="preserve"><value>Failed to publish the project tracking info to the server: {0}</value></data>
+  <data name="ProjectTrackingService_FailedToGetTmServer" xml:space="preserve"><value>Failed to retrieve TM server details: {0}</value></data>
+  <data name="RemoteServer_ProjectTrackingService_InvalidPassword" xml:space="preserve"><value>The specified password is invalid.</value></data>
+  <data name="Server_CustomerAlreadyExists" xml:space="preserve"><value>There is already a customer named '{0}'.</value></data>
+  <data name="ReturnPackageImport_ProjectDoesNotExist" xml:space="preserve"><value>Failed to import return package, because it contains a project that does not exist in your setup (Name='{0}', ID='{1}').</value></data>
+  <data name="OpenServerProjectPackageImport_ProjectFileNotFound" xml:space="preserve"><value>No project XML file with extension .sdlproj not found in package.</value></data>
+  <data name="AutomaticTaskExecutor_TaskPartiallyCompleted" xml:space="preserve"><value>Task completed with errors.</value></data>
+  <data name="InvalidProjectNameException_InvalidCharacters" xml:space="preserve"><value>The project name cannot contain any of the following characters: {0}</value></data>
+  <data name="AutomaticTask_CannotStartSubTask" xml:space="preserve"><value>A sub task of a complex task cannot be started individually. Start the complex task instead.</value></data>
+  <data name="InvalidLocalDataFolderException_Server_InvalidCharacters" xml:space="preserve"><value>The server local data folder cannot contain any of the following characters: {0}</value></data>
+  <data name="ProjectTrackingHelper_InvalidDateTime" xml:space="preserve"><value>The date received from the server is invalid: '{0}'. </value></data>
+  <data name="ProjectTrackingHelper_FileOwnerUpdateFailed" xml:space="preserve"><value>Failed to update file ownership information on the server: {0}</value></data>
+  <data name="OpenServerProject_CannotExecuteCompleted" xml:space="preserve"><value>The open project operation is already completed.</value></data>
+  <data name="Project_ErrorSerializing" xml:space="preserve"><value>Failed to save project '{0}' to '{1}': {2}</value></data>
+  <data name="ProjectPackageCreation_CannotAddSourceFile" xml:space="preserve"><value>You cannot add explicitly add source files to a project package.</value></data>
+  <data name="ProjectPackageImport_InvalidEntryDefinition" xml:space="preserve"><value>Failed to import termbase, because the data does not match the definition</value></data>
+  <data name="Application_ErrorDeserializing" xml:space="preserve"><value>Failed to load application settings from '{0}': {1}</value></data>
+  <data name="OpenServerProjectOperation_NotPublished" xml:space="preserve"><value>The project with ID '{0}' cannot be opened because it was not successfully published to the server.</value></data>
+  <data name="ReturnPackageImport_CouldNotFindUpdateTmTaskTemplate" xml:space="preserve"><value>Could not find task template for importing return packages ('UpdateTM').</value></data>
+  <data name="ProjectsProvider_UserIdInUse" xml:space="preserve"><value>The specified user id is already in use.</value></data>
+  <data name="Project_CannotCreateReturnPackageBecauseProjectNotImported" xml:space="preserve"><value>You cannot create a return package for this project, because the project was not imported.</value></data>
+  </root>
